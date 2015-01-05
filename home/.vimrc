@@ -168,10 +168,7 @@ let NERDTreeMapActivateNode='<CR>'
 "" Shortcuts!!
 
 " Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
+map <Leader>ct :!ctags -r .<CR>
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
@@ -216,6 +213,12 @@ map <C-c>n :cnext<CR>
 map <C-c>p :cprevious<CR>
 
 " Added by Leo
+
+" Switch into background mode
+nnoremap <leader><leader> <C-z>
+
+set shell=/bin/sh
+
 " Move between splits
 nnoremap <S-Tab> <C-W>W
 nnoremap <Tab> <C-W><C-W>
@@ -245,6 +248,7 @@ au FocusLost * :wa
 
 "save and run last command
 nnoremap <CR> :wa<CR>:!!<CR>
+noremap <C-j> <ESC>:wa<CR>:!!<CR>
 
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>

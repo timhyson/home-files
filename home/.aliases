@@ -1,5 +1,6 @@
-alias ll='ls -a'
+alias ll='ls -al'
 alias hup='homesick symlink home-files && source ~/.zshrc && vim +PluginInstall +qall && clear'
-alias ls='ls -G'
+alias ls='ls -Ga'
 alias blender='/Applications/blender.app/Contents/MacOS/blender'
 alias cdh='cd ~/.homesick/repos/home-files/home'
+alias cdy='cd ~/Sites/yoga && git status'
