@@ -84,6 +84,9 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
+# Set vim mode
+bindkey -v
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Custom stuff
