@@ -91,3 +91,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Custom stuff
 source ~/.aliases
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
