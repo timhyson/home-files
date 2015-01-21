@@ -52,5 +52,8 @@ Plugin 'roman/golden-ratio'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 
+" Tmux
+Plugin 'pivotal/tmux-config'
+
 call vundle#end()
 filetype on

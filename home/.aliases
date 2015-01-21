@@ -6,3 +6,5 @@ alias cdh='cd ~/.homesick/repos/home-files/home'
 alias cdy='cd ~/Sites/yoga && git status'
 alias gh='git log --oneline --graph --decorate --all'
 alias greps='ps aux | grep'
+alias git_prune='git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git
+branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d'
