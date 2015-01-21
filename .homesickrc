@@ -11,3 +11,7 @@ end
 puts "Setting up zsh"
 `sh install_zsh.sh`
 puts "Done!"
+
+puts "Installing tmux"
+`brew install tmux`
+`brew install reattach-to-user-namespace`
