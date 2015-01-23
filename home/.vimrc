@@ -217,7 +217,7 @@ map <C-c>p :cprevious<CR>
 " Switch into background mode
 nnoremap <leader>. <C-z>
 
-inoremap <C-o> my<Esc>o<Esc>`yi
+" inoremap <C-o> my<Esc>o<Esc>`yi
 
 " Move between splits
 nnoremap <S-Tab> <C-W>W
@@ -254,18 +254,42 @@ noremap <C-j> <ESC>:wa<CR>:!!<CR>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " source vimrc
-nnoremap <leader>es so $MYVIMRC
+nnoremap <leader>es :so $MYVIMRC
 
 "make ctrl-c work with vim on a mac
 vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
 
-
 autocmd FileType javascript inoremap (; ();<Esc>hi
 set autowrite
+
+" I'm not happy with this but I don't understand how vim/zsh work
+" Maybe use tslime
+set shell=/bin/sh
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" Easymotion
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+" keep cursor column when JK motion
+let g:EasyMotion_startofline = 0
+let g:EasyMotion_smartcase = 1
+
+" Two keyword search
+nmap s <Plug>(easymotion-s2)
+
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)

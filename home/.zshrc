@@ -94,4 +94,4 @@ source ~/.aliases
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Vim autosave
-source ~/.vim/bundle/tmux-config/tmux-autowrite/autowrite-vim.sh
+# source ~/.vim/bundle/tmux-config/tmux-autowrite/autowrite-vim.sh
