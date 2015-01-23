@@ -55,5 +55,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Tmux
 Plugin 'pivotal/tmux-config'
 
+Plugin 'danro/rename.vim'
+Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
 filetype on

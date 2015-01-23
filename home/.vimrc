@@ -215,9 +215,9 @@ map <C-c>p :cprevious<CR>
 " Added by Leo
 
 " Switch into background mode
-nnoremap <leader><leader> <C-z>
+nnoremap <leader>. <C-z>
 
-set shell=/bin/sh
+inoremap <C-o> my<Esc>o<Esc>`yi
 
 " Move between splits
 nnoremap <S-Tab> <C-W>W
