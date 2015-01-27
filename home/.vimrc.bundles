@@ -57,5 +57,6 @@ Plugin 'pivotal/tmux-config'
 
 Plugin 'danro/rename.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'yssl/QFEnter'
 call vundle#end()
 filetype on
