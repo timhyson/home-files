@@ -218,6 +218,8 @@ map <C-c>p :cprevious<CR>
 nnoremap <leader>. <C-z>
 
 " inoremap <C-o> my<Esc>o<Esc>`yi
+" Git shortcut
+map <leader>g :Git<space>
 
 " Move between splits
 nnoremap <S-Tab> <C-W>W
@@ -242,7 +244,7 @@ nnoremap <leader>q <C-w>q
 map <C-n> :NERDTreeToggle<CR>
 
 " JJ escape
-inoremap jj <ESC>
+inoremap jj <ESC>:wa<CR>
 
 au FocusLost * :wa
 
@@ -285,11 +287,9 @@ let g:EasyMotion_smartcase = 1
 " Two keyword search
 nmap s <Plug>(easymotion-s2)
 
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+" such very magic
+:nnoremap / /\v
+:cnoremap %s/ %s/\v
 
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+" Indentation
+nnoremap <Leader>i m^gg=G`^
