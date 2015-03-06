@@ -12,3 +12,7 @@ alias git-ci='git commit --amend --message "$(git log --format='%s' -n 1)" --mes
 alias vi='vim'
 alias git_branch_clean='git branch --merged master | grep -v "\* master" | xargs
 -n 1 git branch -d'
+ags () { ag -l "$1" | xargs perl -pi -e "s/$1/$2/g" }
+alias flounce='echo "I can'\''t work under these conditions" | lolcat; sleep 1; exit'
+alias wow='rspec -fd | lolcat'
+alias bundle='bundle | lolcat'
