@@ -16,3 +16,4 @@ ags () { ag -l "$1" | xargs perl -pi -e "s/$1/$2/g" }
 alias flounce='echo "I can'\''t work under these conditions" | lolcat; sleep 1; exit'
 alias wow='rspec -fd | lolcat'
 alias bundle='bundle | lolcat'
+alias hissy_fit='echo "I can'\''t work under these conditions" | lolcat; sleep 1;sudo shutdown -h now'

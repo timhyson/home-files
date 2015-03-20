@@ -292,4 +292,5 @@ nmap s <Plug>(easymotion-s2)
 :cnoremap %s/ %s/\v
 
 " Indentation
-nnoremap <Leader>i m^gg=G`^
+nnoremap <Leader>i gg=G``
+nnoremap == gg=G``
