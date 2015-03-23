@@ -59,5 +59,6 @@ Plugin 'danro/rename.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'yssl/QFEnter'
 Plugin 'elzr/vim-json'
+Plugin 'sjl/vitality.vim'
 call vundle#end()
 filetype on
