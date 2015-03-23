@@ -1,6 +1,7 @@
 alias ll='ls -al'
 alias cdh='cd ~/.homesick/repos/home-files/home'
-alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && clear'
+alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc
+&& cd - && clear'
 alias ls='ls -Ga'
 alias blender='/Applications/blender.app/Contents/MacOS/blender'
 alias cdy='cd ~/Sites/yoga && git status'
