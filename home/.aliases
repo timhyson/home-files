@@ -1,8 +1,8 @@
 alias ll='ls -al'
-alias hup='sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && clear'
+alias cdh='cd ~/.homesick/repos/home-files/home'
+alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && clear'
 alias ls='ls -Ga'
 alias blender='/Applications/blender.app/Contents/MacOS/blender'
-alias cdh='cd ~/.homesick/repos/home-files/home'
 alias cdy='cd ~/Sites/yoga && git status'
 alias gh='git log --oneline --graph --decorate --all'
 alias greps='ps aux | grep'
@@ -17,3 +17,4 @@ alias flounce='echo "I can'\''t work under these conditions" | lolcat; sleep 1; 
 alias wow='rspec -fd | lolcat'
 alias bundle='bundle | lolcat'
 alias hissy_fit='echo "I can'\''t work under these conditions" | lolcat; sleep 1;sudo shutdown -h now'
+alias hub=git
