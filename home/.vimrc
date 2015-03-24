@@ -246,7 +246,7 @@ map <C-n> :NERDTreeToggle<CR>
 " JJ escape
 inoremap jj <ESC>:wa<CR>
 
-au FocusLost * :wa
+:au FocusLost * :wa
 
 "save and run last command
 nnoremap <CR> :wa<CR>:!!<CR>
