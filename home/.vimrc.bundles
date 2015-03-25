@@ -60,5 +60,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'yssl/QFEnter'
 Plugin 'elzr/vim-json'
 Plugin 'sjl/vitality.vim'
+Plugin 'rorymckinley/vim-symbols-strings'
 call vundle#end()
 filetype on

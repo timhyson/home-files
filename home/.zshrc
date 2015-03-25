@@ -46,7 +46,7 @@ ZSH_THEME="af-magic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
+plugins=(git osx tmux hub github fasd autojump history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,9 +91,12 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Custom stuff
 source ~/.aliases
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Vim autosave
 # source ~/.vim/bundle/tmux-config/tmux-autowrite/autowrite-vim.sh
 #
 bindkey '^R' history-incremental-search-backward
+fpath=(
+  /usr/local/share/zsh/site-functions
+  $fpath
+)

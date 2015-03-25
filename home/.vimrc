@@ -22,6 +22,7 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set cursorline    " highlight the current line the cursor is on
+set diffopt+=vertical
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -300,3 +301,7 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+inoremap <Left> :echoe "Use h"<CR>
+inoremap <Right> :echoe "Use l"<CR>
+inoremap <Up> :echoe "Use k"<CR>
+inoremap <Down> :echoe "Use j"<CR>
