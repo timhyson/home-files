@@ -301,7 +301,10 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-inoremap <Left> :echoe "Use h"<CR>
-inoremap <Right> :echoe "Use l"<CR>
-inoremap <Up> :echoe "Use k"<CR>
-inoremap <Down> :echoe "Use j"<CR>
+inoremap <Left> Use h
+inoremap <Right> Use l
+inoremap <Up> Use k
+inoremap <Down> Use j
+
+" Autoformat
+map <Leader>f :Autoformat<CR>
