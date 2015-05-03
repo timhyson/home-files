@@ -60,7 +60,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'yssl/QFEnter'
 Plugin 'elzr/vim-json'
 Plugin 'sjl/vitality.vim'
-Plugin 'rorymckinley/vim-symbols-strings'
 Plugin 'Chiel92/vim-autoformat'
 
 call vundle#end()
