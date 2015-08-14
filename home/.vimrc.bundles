@@ -61,6 +61,9 @@ Plugin 'yssl/QFEnter'
 Plugin 'elzr/vim-json'
 Plugin 'sjl/vitality.vim'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()
 filetype on
