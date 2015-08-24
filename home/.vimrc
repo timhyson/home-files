@@ -260,7 +260,6 @@ inoremap jj <ESC>:wa<CR>
 
 "save and run last command
 nnoremap <CR> :wa<CR>:!!<CR>
-noremap <C-j> <ESC>:wa<CR>:!!<CR>
 
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
