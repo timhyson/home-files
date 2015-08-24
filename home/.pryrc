@@ -1,8 +1,8 @@
 Pry.config.prompt = [proc { "ᚹᚱᛘ ᛬ " },
                      proc { "     | " }]
 
-# switch default editor for pry to atom
-Pry.config.editor = "atom"
+# switch default editor for pry to vim
+Pry.config.editor = "vim"
 
 Dir['./lib/*.rb'].each { |f| require f }
 
