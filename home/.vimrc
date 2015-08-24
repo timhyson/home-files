@@ -340,3 +340,6 @@ let g:NumberToggleTrigger="<leader>r"
 
 " Pomodoro
 nmap <leader>T :!thyme -d<CR><CR>
+
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
