@@ -1,13 +1,29 @@
- # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export ZDOTDIR=$HOME
+#Path to your oh-my-zsh installation.
+
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+# currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
 ZSH_THEME="af-magic"
+#ZSH_THEME="darkblood"
 
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rake="noglob rake"
+
+# Mac Helpers
+alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
+alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+
+# SICP Racket Bullshit
+alias racket="racket -i -p neil/sicp -l xrepl"
+
+# Leo's commandments
+alias flounce='echo "I can'\''t work under these conditions" | lolcat; sleep 1; exit'
+alias hissy_fit='echo "I can'\''t work under these conditions" | lolcat; sleep 1;sudo shutdown -h now'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -46,53 +62,59 @@ ZSH_THEME="af-magic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx tmux github fasd history-substring-search nyan zsh-syntax-highlighting)
+plugins=(git osx tmux github fasd history-substring-search zsh-syntax-highlighting nyan)
 
+export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
-export PATH="/usr/local/bin:	/usr/local/share/python:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$PATH"
 
+export PATH=$PATH:"/usr/local/bin:/usr/local/heroku/bin:/Users/roidriscoll/.rvm/gems/ruby-2.1.1/bin:/Users/roidriscoll/.rvm/gems/ruby-2.1.1@global/bin:/Users/roidriscoll/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/roidriscoll/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+alias cdh='cd ~/.homesick/repos/home-files/home'
+alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+export TESTING_MAKERS=working
+export ASSIST_AUTH=3de251c1a21d37a9b71ac933ae8d5a11b7156f6b9f778b4b3a0c5f8cc62a5430
+export MARVEL_PUBLIC_KEY=1a9203ed9ceacb02b238a7fb81498ba2
+export MARVEL_PRIVATE_KEY=3174be261c9ca0a9485f1685e9ef0aa237c106c8
 
-# Colorize terminal
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
+#############
+# FUNCTIONS
+#############
 
-# Nicer history
-export HISTSIZE=100000
-export HISTFILE="$HOME/.history"
-export SAVEHIST=$HISTSIZE
 
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\C-x\C-e' edit-command-line
+function mygr8() {
+  bin/rake db:migrate
+  bin/rake db:migrate RAILS_ENV=test
+}
 
-# Set vim mode
-bindkey -v
+mcd() { # creates a directory and places you in it
+  mkdir -p $1
+  cd $1
+}
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# Custom stuff
-source ~/.aliases
+# Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
+. `brew --prefix`/etc/profile.d/z.sh
+source /usr/local/share/zsh/site-functions
+alias s="~/chat.txt << "
 
-# Vim autosave
-# source ~/.vim/bundle/tmux-config/tmux-autowrite/autowrite-vim.sh
-#
-bindkey '^R' history-incremental-search-backward
+alias rubes="ruby -run -ehttpd . -p8000"

@@ -6,6 +6,10 @@ Pry.config.editor = "atom"
 
 Dir['./lib/*.rb'].each { |f| require f }
 
-# if you have already done 'gem install awesome_print':
-# require "awesome_print"
-# AwesomePrint.pry!
+require "awesome_print"
+AwesomePrint.pry!
+
+# Hit Enter to repeat last command
+Pry::Commands.command /^$/, "repeat last command" do
+  _pry_.run_command Pry.history.to_a.last
+end

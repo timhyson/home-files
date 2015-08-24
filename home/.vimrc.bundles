@@ -28,6 +28,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'morhetz/gruvbox'
+Plugin 'takac/vim-hardtime'
 " Plugin 'vim-scripts/tComment'
 
 " Auto align
