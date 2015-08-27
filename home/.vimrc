@@ -309,10 +309,6 @@ map <Leader>f :Autoformat<CR>
 nnoremap <Leader>i gg=G``
 nnoremap == gg=G``
 
-" Enter newline without insert mode, and stay on current line
-" http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
-nmap <CR> o<Esc>k
-
 " Move up and down by visual line (as opposed to line break only)
 nnoremap j gj
 nnoremap k gk
