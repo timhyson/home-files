@@ -118,3 +118,4 @@ source /usr/local/share/zsh/site-functions
 alias s="~/chat.txt << "
 
 alias rubes="ruby -run -ehttpd . -p8000"
+alias roigrok="ngrok -subdomain=roi 8000"
