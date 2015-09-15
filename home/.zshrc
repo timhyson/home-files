@@ -90,10 +90,6 @@ alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc &
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export TESTING_MAKERS=working
-export ASSIST_AUTH=3de251c1a21d37a9b71ac933ae8d5a11b7156f6b9f778b4b3a0c5f8cc62a5430
-export MARVEL_PUBLIC_KEY=1a9203ed9ceacb02b238a7fb81498ba2
-export MARVEL_PRIVATE_KEY=3174be261c9ca0a9485f1685e9ef0aa237c106c8
 
 #############
 # FUNCTIONS
