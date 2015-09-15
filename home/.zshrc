@@ -72,6 +72,8 @@ export PATH=$PATH:"/usr/local/bin:/usr/local/heroku/bin:/Users/roidriscoll/.rvm/
 # export MANPATH="/usr/local/man:$MANPATH"
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
 
+export EDITOR="/usr/bin/vim"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -117,3 +119,4 @@ alias rubes="ruby -run -ehttpd . -p8000"
 alias roigrok="ngrok -subdomain=roi 8000"
 
 bindkey -v
+
