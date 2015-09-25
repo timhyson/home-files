@@ -120,3 +120,6 @@ alias roigrok="ngrok -subdomain=roi 8000"
 
 bindkey -v
 
+#alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
