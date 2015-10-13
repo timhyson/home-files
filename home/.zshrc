@@ -6,9 +6,13 @@ DEFAULT_USER=Tim
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
+<<<<<<< b764cb540eba48b9dbc33304897f0cdeff8b20d5
 #ZSH_THEME="af-magic"
 #ZSH_THEME="dstufft"
 ZSH_THEME="agnoster"
+=======
+ZSH_THEME="af-magic"
+>>>>>>> Updates dotfiles
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -131,7 +135,7 @@ bindkey '^Z' fancy-ctrl-z
 alias s="~/chat.txt << "
 
 alias rubes="ruby -run -ehttpd . -p8000"
-alias roigrok="ngrok -subdomain=roi 8000"
+alias harrygrok="ngrok -subdomain=harry 8000"
 
 bindkey -v
 
