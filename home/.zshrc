@@ -114,6 +114,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
+<<<<<<< 9e6ca08f0b1ed3d1f167a37c0ec3ef720f83a417
 source /usr/local/share/zsh/site-functions
 
 # To link aliases between bash and zsh shells:
@@ -132,6 +133,9 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+=======
+source /usr/local/share/zsh/functions
+>>>>>>> Updates dotfiles
 alias s="~/chat.txt << "
 
 alias rubes="ruby -run -ehttpd . -p8000"
