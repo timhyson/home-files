@@ -114,6 +114,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
+<<<<<<< 9bb7a8780b931202c494de458b5d00842cc044ed
 <<<<<<< 9e6ca08f0b1ed3d1f167a37c0ec3ef720f83a417
 source /usr/local/share/zsh/site-functions
 
@@ -135,6 +136,9 @@ bindkey '^Z' fancy-ctrl-z
 
 =======
 source /usr/local/share/zsh/functions
+>>>>>>> Updates dotfiles
+=======
+source /usr/local/share/zsh/site-functions
 >>>>>>> Updates dotfiles
 alias s="~/chat.txt << "
 
