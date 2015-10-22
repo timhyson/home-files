@@ -317,7 +317,7 @@ nnoremap j gj
 nnoremap k gk
 
 " New Theme <3
-colorscheme anderson
+colorscheme gruvbox
 
 " Setting dark mode
 set background=dark
