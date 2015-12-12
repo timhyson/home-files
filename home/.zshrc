@@ -6,8 +6,8 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
-ZSH_THEME="af-magic"
-#ZSH_THEME="darkblood"
+#ZSH_THEME="af-magic"
+ZSH_THEME="dstufft"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
