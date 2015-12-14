@@ -257,7 +257,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>es :so $MYVIMRC
 
-"make ctrl-c work with vim on a mac
+" make ctrl-c work with vim on a mac
 vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
 
 autocmd FileType javascript inoremap (; ();<Esc>hi

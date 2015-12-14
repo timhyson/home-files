@@ -76,5 +76,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mustache/vim-mustache-handlebars'
 
+" JavaScript linter
+Plugin 'wookiehangover/jshint.vim'
+
 call vundle#end()
 filetype on
