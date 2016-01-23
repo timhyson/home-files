@@ -317,7 +317,7 @@ nnoremap j gj
 nnoremap k gk
 
 " New Theme <3
-colorscheme gruvbox
+colorscheme sourcerer
 
 " Setting dark mode
 set background=dark
@@ -344,3 +344,8 @@ let g:hardtime_timeout = 900
 let g:hardtime_showmsg = 1
 let g:hardtime_maxcount = 2
 
+" Clojure Syntax Formatting
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

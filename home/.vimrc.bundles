@@ -28,10 +28,17 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'morhetz/gruvbox'
 Plugin 'takac/vim-hardtime'
 Plugin 'rizzatti/dash.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'vim-scripts/tComment'
+
+" Da Colourz
+Plugin 'xero/sourcerer.vim'
+"Plugin 'morhetz/gruvbox'
+"Plugin 'keith/parsec.vim'
+
 
 " Auto align
 " Plugin 'vim-scripts/vimball'
