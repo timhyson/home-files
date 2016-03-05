@@ -42,7 +42,7 @@ Now commit and push back up to your remote fork. At this point, I would advise y
 
 Next, use the homesick command to clone this repository:
 
-    homesick clone git://github.com/timhyson/home-files.git
+    homesick clone https://github.com/timhyson/home-files.git
 
 you can now link its contents into your home dir:
 
