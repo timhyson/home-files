@@ -309,7 +309,7 @@ nnoremap <leader>ws :StripWhitespace<CR>
 map <Leader>f :Autoformat<CR>
 
 " Indentation
-nnoremap <Leader>i gg=G``
+"nnoremap <Leader>i gg=G``
 nnoremap == gg=G``
 
 " Move up and down by visual line (as opposed to line break only)
