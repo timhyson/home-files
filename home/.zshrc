@@ -21,12 +21,8 @@ alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killa
 # SICP Racket Bullshit
 alias racket="racket -i -p neil/sicp -l xrepl"
 
-# Leo's commandments
-alias flounce='echo "I can'\''t work under these conditions" | lolcat; sleep 1; exit'
-alias hissy_fit='echo "I can'\''t work under these conditions" | lolcat; sleep 1;sudo shutdown -h now'
-
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
