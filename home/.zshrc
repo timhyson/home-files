@@ -7,7 +7,9 @@
 # time that oh-my-zsh is loaded.
 # currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
 #ZSH_THEME="af-magic"
-ZSH_THEME="dstufft"
+#ZSH_THEME="dstufft"
+ZSH_THEME="agnoster"
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
