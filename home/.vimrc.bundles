@@ -37,6 +37,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 " Da Colourz
 Plugin 'xero/sourcerer.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'keith/parsec.vim'
 
 

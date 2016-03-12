@@ -317,7 +317,8 @@ nnoremap j gj
 nnoremap k gk
 
 " New Theme <3
-colorscheme sourcerer
+"colorscheme sourcerer
+colorscheme solarized
 
 " Setting dark mode
 set background=dark
