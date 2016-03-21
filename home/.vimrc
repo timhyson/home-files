@@ -9,8 +9,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-"colorscheme jellybeans
-
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -270,10 +268,10 @@ set autowrite
 set shell=/bin/sh
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
+"map <Leader>t :call RunCurrentSpecFile()<CR>
+"map <Leader>s :call RunNearestSpec()<CR>
 "map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
 
 " Cucumber mapping
 map <Leader>c :w<cr>:!cucumber<cr>
@@ -327,8 +325,8 @@ set background=dark
 runtime macros/matchit.vim
 
 " Toggle Paste
-nnoremap <leader>p :set invpaste paste?<CR>
-imap <leader>p <C-O>:set invpaste paste?<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<leader>p
 
 nnoremap <Leader>H :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
@@ -345,8 +343,5 @@ let g:NumberToggleTrigger="<leader>r"
 " let g:hardtime_showmsg = 1
 " let g:hardtime_maxcount = 2
 
-" Clojure Syntax Formatting
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<c-r><c-w>\b"<CR>:cw<CR>
