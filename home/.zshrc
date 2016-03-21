@@ -1,5 +1,5 @@
 #Path to your oh-my-zsh installation.
-
+DEFAULT_USER=Tim
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -9,7 +9,6 @@
 #ZSH_THEME="af-magic"
 #ZSH_THEME="dstufft"
 ZSH_THEME="agnoster"
-
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -112,6 +111,20 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
 source /usr/local/share/zsh/site-functions
+
+# Use ctrl-z to return to vim
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 alias s="~/chat.txt << "
 
 alias rubes="ruby -run -ehttpd . -p8000"
