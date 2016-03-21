@@ -112,6 +112,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 . `brew --prefix`/etc/profile.d/z.sh
 source /usr/local/share/zsh/site-functions
 
+# To link aliases between bash and zsh shells:
+source $HOME/.aliases
+
 # Use ctrl-z to return to vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
