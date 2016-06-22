@@ -5,7 +5,8 @@ alias ll='ls -lFG'
 alias la='ls -alFG'
 
 # Back up home files to github
-# alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
+alias cdh='cd ~/.homesick/repos/home-files/home'
+alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
 
 # Github aliases
 alias gs="git status"

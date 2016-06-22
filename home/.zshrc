@@ -6,13 +6,9 @@ DEFAULT_USER=Tim
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
-<<<<<<< b764cb540eba48b9dbc33304897f0cdeff8b20d5
 #ZSH_THEME="af-magic"
 #ZSH_THEME="dstufft"
 ZSH_THEME="agnoster"
-=======
-ZSH_THEME="af-magic"
->>>>>>> Updates dotfiles
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -114,8 +110,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
-<<<<<<< 9bb7a8780b931202c494de458b5d00842cc044ed
-<<<<<<< 9e6ca08f0b1ed3d1f167a37c0ec3ef720f83a417
 source /usr/local/share/zsh/site-functions
 
 # To link aliases between bash and zsh shells:
@@ -134,12 +128,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-=======
-source /usr/local/share/zsh/functions
->>>>>>> Updates dotfiles
-=======
-source /usr/local/share/zsh/site-functions
->>>>>>> Updates dotfiles
 alias s="~/chat.txt << "
 
 alias rubes="ruby -run -ehttpd . -p8000"
@@ -152,4 +140,4 @@ bindkey -v
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 # Syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
