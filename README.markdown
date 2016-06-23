@@ -36,7 +36,7 @@ To install, first install [homesick](https://github.com/technicalpickles/homesic
 
     gem install homesick
 
-Next step is to FORK this repository. Clone it to your local machine, and make sure you do a find-and-replace across the entire repo for `Tim` and replace it with the name of your User folder. Then go into the .gitconfig file and make sure you change your Git username and email address to your relevant details, unless you want me taking credit for your commits :)
+Next step is to FORK this repository. Clone it to your local machine, and make sure you do a find-and-replace across the entire repo for `timhyson` and replace it with the name of your User folder. Then go into the .gitconfig file and make sure you change your Git username and email address to your relevant details, unless you want me taking credit for your commits :)
 
 Now commit and push back up to your remote fork. At this point, I would advise you delete the clone on your local machine as you will be re-cloning this via `homesick` so to avoid confusion it's best to have just one version of the repo cloned locally.
 

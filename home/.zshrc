@@ -1,5 +1,5 @@
 #Path to your oh-my-zsh installation.
-DEFAULT_USER=Tim
+DEFAULT_USER=timhyson
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -65,7 +65,7 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/Tim/.rvm/gems/ruby-2.1.1/bin:/Users/Tim/.rvm/gems/ruby-2.1.1@global/bin:/Users/Tim/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/Tim/.rvm/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1@global/bin:/Users/timhyson/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/timhyson/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 # move /usr/local/bin/git: before /usr/bin:]
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
