@@ -135,6 +135,12 @@ alias harrygrok="ngrok -subdomain=harry 8000"
 
 bindkey -v
 
+# By default, word jumps (option + → or ←) do not work. You can make this work
+# by adding the following to your ~/.zshrc:
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+
 #alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 #alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
