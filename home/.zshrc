@@ -65,7 +65,7 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1@global/bin:/Users/timhyson/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/timhyson/.rvm/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1@global/bin:/Users/timhyson/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/timhyson/.rvm/bin:/usr/local/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 # move /usr/local/bin/git: before /usr/bin:]
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
