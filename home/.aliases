@@ -27,6 +27,7 @@ alias j=z
 
 export PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
+# Wonga dev aliases
 alias phpuuk='phpunit -c phpunit/config.xml --testsuite "CL_UK"'
 alias resetdev="drush wdid NEWEST//UK -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && (setdevuk)"
 alias setdevuk="drush en wonga_development -y;

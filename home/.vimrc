@@ -240,6 +240,7 @@ nnoremap <leader>w <C-w>v<C-w>1
 nnoremap <leader>q <C-w>q
 
 " Nerdtree
+map <C-t> :NERDTreeFind<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " JJ escape
