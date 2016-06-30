@@ -12,7 +12,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```bash
 brew install tmux
 ```
-##### z
+##### z (via homebrew)
 ```bash
 brew install z
 ```
