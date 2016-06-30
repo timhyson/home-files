@@ -1,9 +1,5 @@
-" Use Vim settings, rather then Vi settings. This setting must be as early as
-" possible, as it has side effects.
-set nocompatible
-
 " Change <Leader>
-let mapleader = "\<Space>"
+let mapleader = " "
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
