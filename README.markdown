@@ -8,7 +8,7 @@ This contains all my home file configurations (in particular my vim setup) so th
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-##### Tmux
+##### Tmux (via homebrew)
 ```bash
 brew install tmux
 ```
