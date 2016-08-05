@@ -28,7 +28,6 @@ alias j=z
 export PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
 # Wonga dev aliases
-alias phpuuk='phpunit -c phpunit/config.xml --testsuite "CL_UK"'
 alias resetdev="drush wdid NEWEST//UK -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && (setdevuk)"
 alias setdevuk="drush en wonga_development -y;
                 drush en wonga_static_mock -y;
@@ -36,8 +35,12 @@ alias setdevuk="drush en wonga_development -y;
                 drush en wonga_journey_simple_devel -y;
                 drush dis wonga_autologout wonga_qubit -y;
                 drush vset preprocess_js 0 -y;
-                drush vset preprocess_css 0 -y;"
+                drush vset preprocess_css 0 -y;
+                drush en devel;
+                drush role-add-perm 'anonymous user' 'access devel information';"
+alias bowerupdate="rm -rf bower_components && bower cache clean && bower install"
 alias entities="php phpunit/lib/GenerateMessageEntities.php"
+alias phpuuk='phpunit -c phpunit/config.xml --testsuite "CL_UK"'
 alias setpassuk="mysql -uroot -pPassw0rd wonga_uk -e \"UPDATE users SET pass = 'd41e98d1eafa6d6011d3a70f1a5b92f0' WHERE uid = 1\""
 alias test="phpunit -c phpunit/config.xml"
 
