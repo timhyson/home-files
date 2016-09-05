@@ -5,6 +5,6 @@ homesick symlink home-files
 vim +PluginInstall +qall
 cd .
 git add -A .
-git commit -m "Updates dotfiles"
+git commit -m "Update dotfiles."
 git push
 
