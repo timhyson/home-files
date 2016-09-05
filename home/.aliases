@@ -36,7 +36,7 @@ alias setdevuk="drush en wonga_development -y;
                 drush dis wonga_autologout wonga_qubit -y;
                 drush vset preprocess_js 0 -y;
                 drush vset preprocess_css 0 -y;
-                drush en devel;
+                drush en devel -y;
                 drush role-add-perm 'anonymous user' 'access devel information';"
 alias bowerupdate="rm -rf bower_components && bower cache clean && bower install"
 alias entities="php phpunit/lib/GenerateMessageEntities.php"

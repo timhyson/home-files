@@ -65,6 +65,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 " Tmux
 Plugin 'pivotal/tmux-config'
+Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'danro/rename.vim'
 Plugin 'Lokaltog/vim-easymotion'
