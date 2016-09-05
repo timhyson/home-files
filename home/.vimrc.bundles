@@ -34,6 +34,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'vim-scripts/tComment'
 
+
 " Da Colourz
 Plugin 'xero/sourcerer.vim'
 Plugin 'morhetz/gruvbox'
@@ -45,6 +46,7 @@ Plugin 'altercation/vim-colors-solarized'
 " Plugin 'vim-scripts/vimball'
 " Plugin 'vim-scripts/Align'
 " Plugin 'vim-scripts/AutoAlign'
+
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -62,6 +64,7 @@ Plugin 'bling/vim-airline'
 Plugin 'roman/golden-ratio'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+
 
 " Tmux
 Plugin 'pivotal/tmux-config'
