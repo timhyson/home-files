@@ -13,7 +13,7 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias rake="noglob rake"
+# alias rake="noglob rake"
 
 # Mac Helpers
 alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
@@ -147,3 +147,5 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 # Syntax highlighting
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

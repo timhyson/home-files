@@ -1,4 +1,4 @@
-" Change <Leader>
+" Leader
 let mapleader = " "
 
 if filereadable(expand("~/.vimrc.bundles"))
@@ -26,7 +26,7 @@ set colorcolumn=+1
 set number
 set numberwidth=5
 
-"sm:    flashes matching brackets or parentheses
+"sm: flashes matching brackets or parentheses
 set showmatch
 
 " Softtabs, 2 spaces
@@ -44,24 +44,22 @@ set smarttab
 " When scrolling off-screen do so 3 lines at a time, not 1
 set scrolloff=3
 
+set spelllang=en_gb
+
 " Enable tab complete for commands.
 " first tab shows all matches. next tab starts cycling through the matches
 set wildmenu
-
-set spelllang=en_gb
-
+set wildmode=list:longest,list:full
 
 " Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-set wildmode=list:longest,list:full
+" will insert tab at beginning of line, will use completion if not at beginning
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
@@ -76,36 +74,36 @@ endif
 filetype plugin indent on
 
 augroup vimrcEx
-  autocmd!
+autocmd!
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it for commit messages, when the position is invalid, or when
-  " inside an event handler (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+" When editing a file, always jump to the last known cursor position.
+" Don't do it for commit messages, when the position is invalid, or when
+" inside an event handler (happens when dropping a file on gvim).
+autocmd BufReadPost *
+\ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "normal g`\"" |
+\ endif
 
-  " Cucumber navigation commands
-  autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-  autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
+" Cucumber navigation commands
+autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
+autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
 
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
+" Set syntax highlighting for specific file types
+autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
-  " Enable spellchecking for Markdown
-  autocmd FileType markdown setlocal spell
+" Enable spellchecking for Markdown
+autocmd FileType markdown setlocal spell
 
-  " Automatically wrap at 80 characters for Markdown
-  "autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+" Automatically wrap at 80 characters for Markdown
+"autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
-  " Automatically wrap at 72 characters and spell check git commit messages
-  autocmd FileType gitcommit setlocal textwidth=72
-  autocmd FileType gitcommit setlocal spell
+" Automatically wrap at 72 characters and spell check git commit messages
+autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal spell
 
-  " Allow stylesheets to autocomplete hyphenated words
-  autocmd FileType css,scss,sass setlocal iskeyword+=-
+" Allow stylesheets to autocomplete hyphenated words
+autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -118,6 +116,11 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
 endif
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
@@ -135,20 +138,19 @@ set splitbelow
 set splitright
 
 " Open the Rails ApiDock page for the word under cursor, using the 'open'
-  " command
+" command
 let g:browser = 'open '
 
-function! OpenRailsDoc(keyword)
-let url = 'http://apidock.com/rails/'.a:keyword
-exec '!'.g:browser.' '.url
-endfunction
+"function! OpenRailsDoc(keyword)
+"let url = 'http://apidock.com/rails/'.a:keyword
+"exec '!'.g:browser.' '.url
+"endfunction
 
-" Open the Ruby ApiDock page for the word under cursor, using the 'open'
-" command
-function! OpenRubyDoc(keyword)
-let url = 'http://apidock.com/ruby/'.a:keyword
-exec '!'.g:browser.' '.url
-endfunction
+" Open the Ruby ApiDock page for the word under cursor, using the 'open' command
+"function! OpenRubyDoc(keyword)
+"let url = 'http://apidock.com/ruby/'.a:keyword
+"exec '!'.g:browser.' '.url
+"endfunction
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
@@ -160,7 +162,7 @@ let NERDTreeShowHidden = 1
 let NERDTreeMapActivateNode='<CR>'
 let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
 
-"" Shortcuts!!
+" Shortcuts!!
 
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -r .<CR>
@@ -324,7 +326,7 @@ runtime macros/matchit.vim
 " Toggle Paste
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
-set pastetoggle=<leader>p
+"set pastetoggle=<leader>p
 
 nnoremap <Leader>H :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
 
