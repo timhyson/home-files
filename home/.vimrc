@@ -1,5 +1,14 @@
+"===============================================================================
+"                                 ~My vimrc~
+"===============================================================================
+"
+" Author:       Tim Hyson [http://timhyson.com]
+" Source:       https://github.com/timhyson/home-files
+"
+"-------------------------------------------------------------------------------
+"
 " Leader
-let mapleader = " "
+let mapleader = "\<Space>"
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -201,7 +210,7 @@ nnoremap Y y$
 noremap <leader>rb :call OpenRubyDoc(expand('<cword>'))<CR>
 noremap <leader>rr :call OpenRailsDoc(expand('<cword>'))<CR>
 
-" Easily spell check
+  " Easily spell check
 " http://vimcasts.org/episodes/spell-checking/
 nmap <silent> <leader>s :set spell!<CR>
 
@@ -247,8 +256,8 @@ inoremap jj <ESC>:wa<CR>
 au FocusLost * :wa
 
 "save and run last command
-nnoremap <CR> :wa<CR>:!!<CR>
-noremap <C-j> <ESC>:wa<CR>:!!<CR>
+"nnoremap <CR> :wa<CR>:!!<CR>
+"noremap <C-j> <ESC>:wa<CR>:!!<CR>
 
 "open vimrc
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
