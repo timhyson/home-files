@@ -66,6 +66,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Tmux
 Plugin 'pivotal/tmux-config'
 Plugin 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plugin 'danro/rename.vim'
 Plugin 'Lokaltog/vim-easymotion'
