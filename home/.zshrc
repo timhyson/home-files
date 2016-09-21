@@ -5,9 +5,6 @@ DEFAULT_USER=timhyson
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# currently liking: 'miloshadzic', 'blinks', 'smt', 'dogenpunk'
-#ZSH_THEME="af-magic"
-#ZSH_THEME="dstufft"
 ZSH_THEME="agnoster"
 
 # Example aliases
@@ -95,18 +92,10 @@ alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc &
 # FUNCTIONS
 #############
 
-
-function mygr8() {
-  bin/rake db:migrate
-  bin/rake db:migrate RAILS_ENV=test
-}
-
 mcd() { # creates a directory and places you in it
   mkdir -p $1
   cd $1
 }
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
@@ -128,11 +117,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-alias s="~/chat.txt << "
-
-alias rubes="ruby -run -ehttpd . -p8000"
-alias harrygrok="ngrok -subdomain=harry 8000"
-
 bindkey -v
 
 # By default, word jumps (option + → or ←) do not work. You can make this work
@@ -141,11 +125,8 @@ bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
-#alias v='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 # Syntax highlighting
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
