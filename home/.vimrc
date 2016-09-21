@@ -83,36 +83,31 @@ endif
 filetype plugin indent on
 
 augroup vimrcEx
-autocmd!
+  autocmd!
 
-" When editing a file, always jump to the last known cursor position.
-" Don't do it for commit messages, when the position is invalid, or when
-" inside an event handler (happens when dropping a file on gvim).
-autocmd BufReadPost *
-\ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-\   exe "normal g`\"" |
-\ endif
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
-" Cucumber navigation commands
-autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
 
-" Set syntax highlighting for specific file types
-autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+  " Enable spellchecking for Markdown
+  autocmd FileType markdown setlocal spell
 
-" Enable spellchecking for Markdown
-autocmd FileType markdown setlocal spell
+  " Automatically wrap at 80 characters for Markdown
+  "autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
-" Automatically wrap at 80 characters for Markdown
-"autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
 
-" Automatically wrap at 72 characters and spell check git commit messages
-autocmd FileType gitcommit setlocal textwidth=72
-autocmd FileType gitcommit setlocal spell
-
-" Allow stylesheets to autocomplete hyphenated words
-autocmd FileType css,scss,sass setlocal iskeyword+=-
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
@@ -131,9 +126,6 @@ if executable('ag')
     nnoremap \ :Ag<SPACE>
   endif
 endif
-
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
@@ -206,11 +198,7 @@ nmap # #nzz
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
-" Easily lookup documentation on apidock
-noremap <leader>rb :call OpenRubyDoc(expand('<cword>'))<CR>
-noremap <leader>rr :call OpenRailsDoc(expand('<cword>'))<CR>
-
-  " Easily spell check
+" Easily spell check
 " http://vimcasts.org/episodes/spell-checking/
 nmap <silent> <leader>s :set spell!<CR>
 
@@ -353,3 +341,10 @@ let g:NumberToggleTrigger="<leader>r"
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<c-r><c-w>\b"<CR>:cw<CR>
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+

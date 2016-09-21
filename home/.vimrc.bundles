@@ -32,6 +32,10 @@ Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'vim-scripts/tComment'
 
 
+" Run tests from within source files
+Plugin 'janko-m/vim-test'
+
+
 " Da Colourz
 Plugin 'xero/sourcerer.vim'
 Plugin 'morhetz/gruvbox'
