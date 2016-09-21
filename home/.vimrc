@@ -341,10 +341,3 @@ let g:NumberToggleTrigger="<leader>r"
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<c-r><c-w>\b"<CR>:cw<CR>
-
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
-
