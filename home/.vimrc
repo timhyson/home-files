@@ -341,3 +341,53 @@ let g:NumberToggleTrigger="<leader>r"
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<c-r><c-w>\b"<CR>:cw<CR>
+
+" Ability to run single or all unit tests from within a test file
+function! RunPHPUnitTest(filter)
+  cd ~/Sites/DrupalV3_UKCL_DEV/app
+  if a:filter
+    normal! T yw
+    let result = system("phpunit --filter " . @" . " " . bufname("%"))
+  else
+    let result = system("phpunit " . bufname("%"))
+  endif
+  split __PHPUnit_Result__
+  normal! ggdG
+  setlocal buftype=nofile
+  call append(0, split(result, '\v\n'))
+  cd -
+endfunction
+
+ " all tests in file
+nnoremap <leader>u :call RunPHPUnitTest(0)<cr>
+" test under cursor
+nnoremap <leader>f :call RunPHPUnitTest(1)<cr>
+
+" copy current file name (relative/absolute) to system clipboard
+if has("mac") || has("gui_macvim") || has("gui_mac")
+  " relative path  (src/foo.txt)
+  nnoremap <leader>cf :let @*=expand("%")<CR>
+
+  " absolute path  (/something/src/foo.txt)
+  nnoremap <leader>cF :let @*=expand("%:p")<CR>
+
+  " filename       (foo.txt)
+  nnoremap <leader>ct :let @*=expand("%:t")<CR>
+
+  " directory name (/something/src)
+  nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
+endif
+
+" avoid common vim typos https://sanctum.geek.nz/arabesque/vim-command-typos/
+if has("user_commands")
+  command! -bang -nargs=? -complete=file E e<bang> <args>
+  command! -bang -nargs=? -complete=file W w<bang> <args>
+  command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+  command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+  command! -bang Wa wa<bang>
+  command! -bang WA wa<bang>
+  command! -bang Q q<bang>
+  command! -bang QA qa<bang>
+  command! -bang Qa qa<bang>
+endif
+
