@@ -1,3 +1,4 @@
 tags
 .tags
 jsconfig.json
+.DS_Store

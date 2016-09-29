@@ -228,11 +228,11 @@ endif
 nnoremap <S-Tab> <C-W>W
 nnoremap <Tab> <C-W><C-W>
 
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+" Quicker window movement - clashes with tmux
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-l> <C-w>l
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<c-r><c-w>\b"<CR>:cw<CR>
