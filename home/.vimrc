@@ -90,7 +90,7 @@ set complete=.,w,b,u,t,i
 set incsearch     " do incremental searching
 set hlsearch      " highlight matches
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<cr>
+nnoremap <silent> <leader><space> <Esc>:nohlsearch<CR><Esc>
 "}}}
 "-------------------------------------------------------------------------------
 " Folding {{{
