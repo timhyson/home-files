@@ -186,7 +186,7 @@ nnoremap <leader>q <C-w>q
 " map <leader>g :Git<space>
 
 " Index ctags from any project
-map <Leader>ct :!ctags -r .<CR>
+map <Leader>ct :!ctags -R .<CR>
 
 " all tests in file
 nnoremap <leader>u :call RunPHPUnitTest(0)<cr>
@@ -202,7 +202,7 @@ if has("mac") || has("gui_macvim") || has("gui_mac")
   nnoremap <leader>cF :let @*=expand("%:p")<CR>
 
   " filename       (foo.txt)
-  nnoremap <leader>ct :let @*=expand("%:t")<CR>
+  nnoremap <leader>cn :let @*=expand("%:t")<CR>
 
   " directory name (/something/src)
   nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
