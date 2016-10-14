@@ -9,15 +9,15 @@
 
 
 "-------------------------------------------------------------------------------
-" Launch Config {{{
+" Launch Config
 "-------------------------------------------------------------------------------
 " Extract all vim plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
-"}}}
+
 "-------------------------------------------------------------------------------
-" Colors {{{
+" Colors
 "-------------------------------------------------------------------------------
 colorscheme solarized
 "colorscheme badwolf
@@ -38,9 +38,9 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-"}}}
+
 "-------------------------------------------------------------------------------
-" Space and Tabs {{{
+" Space and Tabs
 "-------------------------------------------------------------------------------
 " Softtabs, 2 spaces
 set tabstop=2     " number of visual spaces per TAB
@@ -53,9 +53,9 @@ filetype indent on " load filetype-specific indent files
 filetype plugin on " load filetype-specific plugin files
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
-"}}}
+
 "-------------------------------------------------------------------------------
-" UI Layout {{{
+" UI Layout
 "-------------------------------------------------------------------------------
 set number        " show line numbers
 set numberwidth=5
@@ -83,26 +83,26 @@ set spelllang=en_gb " spell check
 set history=50
 set autowrite     " Automatically :write before running commands
 set complete=.,w,b,u,t,i
-"}}}
+
 "-------------------------------------------------------------------------------
-" Searching {{{
+" Searching
 "-------------------------------------------------------------------------------
 set incsearch     " do incremental searching
 set hlsearch      " highlight matches
 " turn off search highlight
 nnoremap <silent> <leader><space> <Esc>:nohlsearch<CR><Esc>
-"}}}
+
 "-------------------------------------------------------------------------------
-" Folding {{{
+" Folding
 "-------------------------------------------------------------------------------
 set foldmethod=indent   " fold based on indent level
 set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
 nnoremap <Leader>z za
 set foldlevelstart=10   "start with fold level of 1
-"}}}
+
 "-------------------------------------------------------------------------------
-" Line shortcuts {{{
+" Line shortcuts
 "-------------------------------------------------------------------------------
 " Move vertically by visual line (as opposed to line break only)
 nnoremap j gj
@@ -125,9 +125,9 @@ nnoremap gV `[v`]
 " Backspace behaviour
 set backspace=indent,eol,start
 "set backspace=2   " Backspace deletes like most programs in insert mode
-"}}}
+
 "-------------------------------------------------------------------------------
-" Leader Shortcuts {{{
+" Leader Shortcuts
 "-------------------------------------------------------------------------------
 let mapleader = "\<Space>" " leader is space
 
@@ -207,9 +207,9 @@ if has("mac") || has("gui_macvim") || has("gui_mac")
   " directory name (/something/src)
   nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 endif
-"}}}
+
 "-------------------------------------------------------------------------------
-" Keyboard Shortcuts {{{
+" Keyboard Shortcuts
 "-------------------------------------------------------------------------------
 " avoid common vim typos https://sanctum.geek.nz/arabesque/vim-command-typos/
 if has("user_commands")
@@ -253,9 +253,9 @@ nmap # #nzz
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
-"}}}
+
 "-------------------------------------------------------------------------------
-" Copy and Paste {{{
+" Copy and Paste
 "-------------------------------------------------------------------------------
 " Toggle Paste
 nnoremap <F2> :set invpaste paste?<CR>
@@ -267,9 +267,9 @@ imap <F2> <C-O>:set invpaste paste?<CR>
 
 " make ctrl-c work with vim on a mac
 vnoremap <C-c> :w !pbcopy<CR><CR> noremap <C-v> :r !pbpaste<CR><CR>
-"}}}
+
 "-------------------------------------------------------------------------------
-" NERDTree {{{
+" NERDTree
 "-------------------------------------------------------------------------------
 let NERDTreeQuitOnOpen=1
 " colored NERD Tree
@@ -279,9 +279,9 @@ let NERDTreeShowHidden = 1
 " map enter to activating a node
 let NERDTreeMapActivateNode='<CR>'
 let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', '.beam']
-"}}}
+
 "-------------------------------------------------------------------------------
-" CtrlP {{{
+" CtrlP
 "-------------------------------------------------------------------------------
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0     " always open files in new buffers
@@ -305,9 +305,9 @@ if executable('ag')
     nnoremap \ :Ag<SPACE>
   endif
 endif
-"}}}
+
 "-------------------------------------------------------------------------------
-" Tmux {{{
+" Tmux
 "-------------------------------------------------------------------------------
 " Allows cursor change in tmux mode
 if exists('TMUX')
@@ -317,9 +317,9 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-"}}}
+
 "-------------------------------------------------------------------------------
-" Autogroups {{{
+" Autogroups
 "-------------------------------------------------------------------------------
 " Create language-specific settings for certain filetypes / extensions
 augroup configgroup
@@ -369,18 +369,18 @@ augroup vimrcEx
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
-"}}}
+
 "-------------------------------------------------------------------------------
-" Backups {{{
+" Backups
 "-------------------------------------------------------------------------------
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 au FocusLost * :wa
 set autowrite
-"}}}
+
 "-------------------------------------------------------------------------------
-" Custom Functions {{{
+" Custom Functions
 "-------------------------------------------------------------------------------
 function! ToggleNumber()
   if(&relativenumber == 1)
@@ -403,7 +403,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
-"}}}
+
 
 " Ability to run single or all unit tests from within a test file
 function! RunPHPUnitTest(filter)
