@@ -63,6 +63,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1@global/bin:/Users/timhyson/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/timhyson/.rvm/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
 # export PATH=/Users/timhyson/.composer/vendor/bin:/usr/local/php5/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 # move /usr/local/bin/git: before /usr/bin:]
@@ -130,3 +131,7 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 # Syntax highlighting
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#GPG_TTY=$(tty)
+#export GPG_TTY
+
