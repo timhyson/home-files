@@ -52,3 +52,6 @@ alias dfr="drush features-revert-all"
 alias sel_node='cd ~/selenium; java -jar selenium-server-standalone-2.47.1.jar -role node -hub http://localhost:4444/grid/register'
 alias sel_server='cd ~/selenium; java -jar selenium-server-standalone-2.47.1.jar -role hub'
 alias sel_standalone='cd ~/selenium; java -jar selenium-server-standalone-2.47.1.jar'
+
+# Angular 2 aliases
+alias nng="node_modules/.bin/ng"
