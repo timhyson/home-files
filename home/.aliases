@@ -43,7 +43,10 @@ alias entities="php phpunit/lib/GenerateMessageEntities.php"
 alias phpuuk='phpunit -c phpunit/config.xml --testsuite "CL_UK"'
 alias setpassuk="mysql -uroot -pPassw0rd wonga_uk -e \"UPDATE users SET pass = 'd41e98d1eafa6d6011d3a70f1a5b92f0' WHERE uid = 1\""
 alias test="phpunit --configuration phpunit/config.xml"
-
+# run service (e2e) tests against the desktop profile
+alias stest='() { mvn test -Pdev -Dtest=com.wonga.tests.ll.uk."$1"#"$2" }'
+# run service (e2e) tests against the mobile profile
+alias stestmob='() { mvn test -PdevMobile-iPhone -Dtest=com.wonga.tests.ll.uk."$1"#"$2" }'
 # Drush aliases
 alias dcc="drush cache-clear all"
 alias dfr="drush features-revert-all"
