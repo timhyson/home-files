@@ -30,7 +30,6 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 " Plugin 'vim-scripts/tComment'
-Plugin 'Quramy/tsuguyomi'
 
 " Run tests from within source files
 " Plugin 'janko-m/vim-test'
