@@ -3,3 +3,4 @@ tags
 jsconfig.json
 .DS_Store
 launch.json
+.aliases
