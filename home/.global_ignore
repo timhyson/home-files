@@ -1,5 +1,21 @@
+# Ctags
+# =====
+
 tags
 .tags
+
+# Swap files for text editors
+# ===========================
+.*.sw[a-z]
+*~
+
+# Compiled things
+# ===============
+*.pyc
+
+# VSCode
+# ======
+gems.tags.vscode/settings.json
 jsconfig.json
 .DS_Store
 launch.json
