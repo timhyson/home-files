@@ -24,6 +24,7 @@ alias greps='ps aux | grep'
 
 alias vi='vim'
 alias j=z
+alias myip="ipconfig getifaddr en0"
 
 export PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
