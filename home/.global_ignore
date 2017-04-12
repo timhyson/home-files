@@ -21,3 +21,4 @@ jsconfig.json
 launch.json
 .aliases
 last.sql
+temp.sql
