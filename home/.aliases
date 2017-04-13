@@ -30,7 +30,7 @@ export PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
 # Wonga dev aliases
 alias bastion="tim.hyson@172.16.0.9"
-alias resetdev="drush wdid NEWEST//UK -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && (setdevuk)"
+alias resetdev="drush wdid NEWEST -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && bowerinstall --allow-root && entities && (setdevuk)"
 alias setdevuk="drush en wonga_development -y;
                 drush en wonga_static_mock -y;
                 drush en wonga_session_setup -y;
