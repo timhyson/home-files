@@ -8,7 +8,7 @@ alias la='ls -alFG'
 alias cdh='cd ~/.homesick/repos/home-files/home'
 alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
 
-# Github aliases
+# Git aliases
 alias gs="git status"
 alias gd="git diff --color"
 alias gdc="git diff --cached --color"
@@ -17,6 +17,7 @@ alias gls="git log --oneline"
 alias gprum="git pull --rebase upstream master"
 alias gitprim="git pull --rebase upstream master"
 alias gitpom="git push origin master"
+alias gitcompare="git diff --no-index --word-diff $1 $2"
 
 # Make grep more user friendly by highlighting matches
 alias grep='grep --color=auto'
