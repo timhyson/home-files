@@ -4,7 +4,7 @@
 [push]
     default = simple
 [core]
-	excludesfile = /Users/timhyson/.homesick/repos/home-files/home/.global_ignore
+	excludesfile = ~/.global_ignore
     editor = vim
     ;editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 [color]

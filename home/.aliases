@@ -13,7 +13,8 @@ alias gs="git status"
 alias gd="git diff --color"
 alias gdc="git diff --cached --color"
 alias gl="git log"
-alias gls="git log --oneline"
+alias glo="git log --oneline"
+alias glome="git log --oneline --author='tim.hyson'"
 alias gprum="git pull --rebase upstream master"
 alias gitprim="git pull --rebase upstream master"
 alias gitpom="git push origin master"
@@ -31,7 +32,7 @@ export PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$PATH"
 
 # Wonga dev aliases
 alias bastion="tim.hyson@172.16.0.9"
-alias resetdev="drush wdid NEWEST -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && bowerinstall --allow-root && entities && (setdevuk)"
+alias resetdev="drush wdid NEWEST -y && ./deploy/UK/WIP/post-deploy && drush updatedb -y && drush fra -y && bowerupdate --allow-root && entities && (setdevuk)"
 alias setdevuk="drush en wonga_development -y;
                 drush en wonga_static_mock -y;
                 drush en wonga_session_setup -y;

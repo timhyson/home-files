@@ -18,7 +18,9 @@ tags
 gems.tags.vscode/settings.json
 jsconfig.json
 .DS_Store
-launch.json
 .aliases
 last.sql
 temp.sql
+.vscode/launch.json
+.vscode/settings.json
+*/.vscode/
