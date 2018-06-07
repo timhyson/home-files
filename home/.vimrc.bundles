@@ -33,7 +33,6 @@ Plugin 'kien/rainbow_parentheses.vim'
 
 " Run tests from within source files
 " Plugin 'janko-m/vim-test'
-" Plugin 'joonty/vim-phpunitqf'
 
 
 " Da Colourz

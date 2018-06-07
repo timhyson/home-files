@@ -19,7 +19,7 @@ endif
 "-------------------------------------------------------------------------------
 " Colors
 "-------------------------------------------------------------------------------
-colorscheme solarized
+"colorscheme solarized
 "colorscheme badwolf
 "colorscheme molokai
 
@@ -187,11 +187,6 @@ nnoremap <leader>q <C-w>q
 
 " Index ctags from any project
 map <Leader>ct :!ctags -R .<CR>
-
-" all tests in file
-nnoremap <leader>u :call RunPHPUnitTest(0)<cr>
-" test under cursor
-nnoremap <leader>t :call RunPHPUnitTest(1)<cr>
 
 " copy current file name (relative/absolute) to system clipboard
 if has("mac") || has("gui_macvim") || has("gui_mac")
@@ -403,23 +398,5 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
-
-
-" Ability to run single or all unit tests from within a test file
-function! RunPHPUnitTest(filter)
-  cd ~/Sites/DrupalV3_UKCL_DEV/app
-  if a:filter
-    normal! T yw
-    let result = system("phpunit --filter " . @" . " " . bufname("%"))
-  else
-    let result = system("phpunit " . bufname("%"))
-  endif
-  split __PHPUnit_Result__
-  normal! ggdG
-  setlocal buftype=nofile
-  call append(0, split(result, '\v\n'))
-  cd -
-endfunction
-"}}}
 
 " vim:foldmethod=marker:foldlevel=0
