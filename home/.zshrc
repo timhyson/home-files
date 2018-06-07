@@ -66,6 +66,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+
 ####################
 # User configuration
 ####################
@@ -74,6 +75,9 @@ export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnorema
 
 # Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
 . /usr/local/etc/profile.d/z.sh
+
+# To link aliases between bash and zsh shells:
+source $HOME/.aliases
 
 # By default, word jumps (option + → or ←) do not work. You can make this work
 # by adding the following to your ~/.zshrc:
