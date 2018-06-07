@@ -59,7 +59,6 @@ plugins=(
   brew
   fancy-ctrl-z
   git
-  history-substring-search
   npm
   zsh-syntax-highlighting
 )
