@@ -19,7 +19,7 @@ endif
 "-------------------------------------------------------------------------------
 " Colors
 "-------------------------------------------------------------------------------
-"colorscheme solarized
+colorscheme solarized
 "colorscheme badwolf
 "colorscheme molokai
 
