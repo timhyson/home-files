@@ -1,41 +1,45 @@
-#Path to your oh-my-zsh installation.
-DEFAULT_USER=timhyson
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias rake="noglob rake"
+# Set name of the theme to load. See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# Mac Helpers
-alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
-alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+############################
+# Powerlevel9k customisation
+############################
 
-# SICP Racket Bullshit
-alias racket="racket -i -p neil/sicp -l xrepl"
+# Shorten file-path shown on each line
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
+# Default values, for reference:
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(battery time)
+
+# End Powerlevel9k customisation
+
+
+# Set default user to avoid showing 'user' on every line
+DEFAULT_USER="timhyson"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to disable command auto-correction.
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -45,34 +49,44 @@ CASE_SENSITIVE="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search zsh-syntax-highlighting nyan)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  brew
+  fancy-ctrl-z
+  git
+  history-substring-search
+  npm
+  zsh-syntax-highlighting
+)
 
-export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-# User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/local/bin/git:/usr/local/heroku/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1/bin:/Users/timhyson/.rvm/gems/ruby-2.1.1@global/bin:/Users/timhyson/.rvm/rubies/ruby-2.1.1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/timhyson/.rvm/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
-# export PATH=/Users/timhyson/.composer/vendor/bin:/usr/local/php5/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-# move /usr/local/bin/git: before /usr/bin:]
+####################
+# User configuration
+####################
+
 export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
 
-export EDITOR="/usr/bin/vim"
+# Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
+. /usr/local/etc/profile.d/z.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# By default, word jumps (option + → or ←) do not work. You can make this work
+# by adding the following to your ~/.zshrc:
+bindkey -e
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+# CTRL + W will delete the word left of the cursor
+# CTRL + U will clear the entire line
+# CTRL + K will clear the characters on the line after the current cursor position
+# CTRL + L will clear screen
+# CTRL + _ will undo the last change
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -80,58 +94,10 @@ export EDITOR="/usr/bin/vim"
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR="/usr/bin/vim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias cdh='cd ~/.homesick/repos/home-files/home'
-alias hup='cdh && sh ~/.homesick/repos/home-files/commit.sh && source ~/.zshrc && cd - && clear'
-
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-#############
-# FUNCTIONS
-#############
-
-mcd() { # creates a directory and places you in it
-  mkdir -p $1
-  cd $1
-}
-
-# Config for 'z': http://jilles.me/badassify-your-terminal-and-shell/
-. `brew --prefix`/etc/profile.d/z.sh
-source /usr/local/share/zsh/site-functions
-
-# To link aliases between bash and zsh shells:
-source $HOME/.aliases
-
-# Use ctrl-z to return to vim
-fancy-ctrl-z () {
-if [[ $#BUFFER -eq 0 ]]; then
-  BUFFER="fg"
-  zle accept-line
-else
-  zle push-input
-  zle clear-screen
-fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-bindkey -v
-
-# By default, word jumps (option + → or ←) do not work. You can make this work
-# by adding the following to your ~/.zshrc:
-bindkey -e
-bindkey '^[[1;9C' forward-word
-bindkey '^[[1;9D' backward-word
-
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
-
-# Syntax highlighting
-#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#GPG_TTY=$(tty)
-#export GPG_TTY
-
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
