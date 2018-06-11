@@ -60,6 +60,7 @@ plugins=(
   fancy-ctrl-z
   git
   npm
+  zsh_reload
   zsh-syntax-highlighting
 )
 
