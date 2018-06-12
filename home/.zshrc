@@ -10,17 +10,39 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 ############################
 # Powerlevel9k customisation
 ############################
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Shorten file-path shown on each line
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+# POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
+# POWERLEVEL9K_SHORTEN_DELIMITER=""
 
-# Default values, for reference:
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(battery time)
+# https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tacolizards-configuration
+# DISABLE_AUTO_TITLE="true"
+
+POWERLEVEL9K_BATTERY_CHARGING='yellow'
+POWERLEVEL9K_BATTERY_CHARGED='green'
+POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
+POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
+POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+POWERLEVEL9K_BATTERY_ICON='\uf1e6 '
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%F{white}"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%F{white} "
+
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon battery context dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time background_jobs ram )
+
+POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d.%m.%y}"
+
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=''
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''
 
 # End Powerlevel9k customisation
 
@@ -59,13 +81,13 @@ plugins=(
   brew
   fancy-ctrl-z
   git
+  history-substring-search
   npm
   zsh_reload
   zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-
 
 ####################
 # User configuration
@@ -105,3 +127,7 @@ export EDITOR="/usr/bin/vim"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Type in any part of any command from history and then cycle through matches
+# https://github.com/zsh-users/zsh-history-substring-search
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
