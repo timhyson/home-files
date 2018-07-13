@@ -52,6 +52,6 @@ run the rc file to get vundler installed:
 
     homesick rc home-files
 
-and restart your terminal.
+and then restart your terminal.
 
 You can now use the `hup` command to update your home files and install your vim bundles automatically.
