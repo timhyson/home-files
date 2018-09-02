@@ -1,12 +1,12 @@
 [user]
-    name = Tim Hyson
-    email = tim.hyson@wonga.com
+  name = Tim Hyson
+  email = tjhyson@gmail.com
 [push]
-    default = simple
+  default = simple
 [core]
-	excludesfile = ~/.global_ignore
-    editor = vim
-    ;editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+  excludesfile = ~/.global_ignore
+  editor = vim
+  ;editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 [color]
   ui = auto
 [alias]
@@ -94,4 +94,4 @@
 [fetch]
   prune = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
