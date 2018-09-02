@@ -130,3 +130,4 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 
 export NVM_DIR="/Users/timhyson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
