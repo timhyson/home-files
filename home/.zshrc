@@ -127,3 +127,6 @@ export EDITOR="/usr/bin/vim"
 # Type in any part of any command from history and then cycle through matches
 # https://github.com/zsh-users/zsh-history-substring-search
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+export NVM_DIR="/Users/timhyson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
