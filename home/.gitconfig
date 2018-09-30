@@ -94,4 +94,4 @@
 [fetch]
   prune = true
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
