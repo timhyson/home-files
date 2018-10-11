@@ -128,5 +128,8 @@ export EDITOR="/usr/bin/vim"
 # https://github.com/zsh-users/zsh-history-substring-search
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# https://virtualenvwrapper.readthedocs.io/en/latest/
+source /usr/local/bin/virtualenvwrapper.sh
+
 export NVM_DIR="/Users/timhyson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
