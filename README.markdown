@@ -1,6 +1,6 @@
 # Home dotfiles
 
-This contains all my home file configurations (in particular my vim setup) so that I can share it across computers. Before you go diving in, please be aware that there are a few pre-requisites:
+This contains all my home file configurations (in particular my vim setup) so I can share it across computers. Before you go diving in, please be aware that there are a few pre-requisites:
 
 ### Essential pre-installations:
 
