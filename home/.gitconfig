@@ -6,6 +6,8 @@
 [core]
   excludesfile = ~/.global_ignore
   editor = vim
+	autocrlf = false
+	pager = less -XRF # https://askubuntu.com/questions/429781/less-output-does-not-show-output-in-terminal-after-quitting-it
   ;editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 [color]
   ui = auto
