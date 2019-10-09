@@ -80,6 +80,7 @@ plugins=(
   history-substring-search
   npm
   zsh_reload
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
@@ -130,6 +131,9 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 
 # https://virtualenvwrapper.readthedocs.io/en/latest/
 source /usr/local/bin/virtualenvwrapper.sh
+
+# allow pyenv to set python version
+eval "$(pyenv init -)"
 
 export NVM_DIR="/Users/timhyson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
