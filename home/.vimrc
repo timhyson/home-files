@@ -19,8 +19,8 @@ endif
 "-------------------------------------------------------------------------------
 " Colors
 "-------------------------------------------------------------------------------
-colorscheme solarized
 "colorscheme badwolf
+colorscheme solarized
 "colorscheme molokai
 
 " Setting dark mode
@@ -43,10 +43,10 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Space and Tabs
 "-------------------------------------------------------------------------------
 " Softtabs, 2 spaces
-set tabstop=2     " number of visual spaces per TAB
-set softtabstop=2 " number of spaces in tab when editing
-set expandtab     " tabs are
-set smarttab      " helps with backspacing because of expandtab
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab       " tabs are
+set smarttab        " helps with backspacing because of expandtab
 se shiftwidth=2  " number of spaces for auto indenting
 set shiftround    " use multiples of shiftwidth when indenting with '<' and '>'
 filetype indent on " load filetype-specific indent files
@@ -68,8 +68,8 @@ set ttyfast       " faster redraw
 set showmatch     " flashes matching brackets or parentheses
 " When scrolling off-screen do so 3 lines at a time, not 1
 set scrolloff=3
-" Make it obvious where 80 characters is
-set textwidth=80
+" Make it obvious where 120 characters is
+set textwidth=120
 set colorcolumn=+1
 " Supercharges '%' to work on do-end, def-end, class-end, module-end etc.
 runtime macros/matchit.vim
@@ -339,7 +339,6 @@ augroup configgroup
   autocmd BufEnter *.zsh-theme setlocal filetype=zsh
   autocmd BufEnter Makefile setlocal noexpandtab
   autocmd BufEnter *.sh setlocal tabstop=2
-  autocmd BufEnter *.sh setlocal shiftwidth=2
   autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 
